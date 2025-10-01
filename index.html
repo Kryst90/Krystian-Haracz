@@ -6,19 +6,21 @@
     <title>Krystian Haracz Portfolio</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
+            background: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?_gl=1*twa2p3*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDEzODckbzEkZzEkdDE3NTkzNDE0MzMkajE0JGwwJGgw") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #222;
+            background-color: rgba(34,34,34,0.9);
             padding: 15px 30px;
             position: sticky;
             top: 0;
@@ -30,7 +32,6 @@
             color: #4CAF50;
             font-size: 26px;
             font-weight: 700;
-            letter-spacing: 1.2px;
             cursor: default;
         }
 
@@ -42,9 +43,7 @@
             align-items: center;
         }
 
-        nav ul li {
-            margin-left: 25px;
-        }
+        nav ul li { margin-left: 25px; }
 
         nav ul li a {
             color: #fff;
@@ -54,9 +53,7 @@
             transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
+        nav ul li a:hover { color: #4CAF50; }
 
         #lang-switcher {
             display: flex;
@@ -77,9 +74,7 @@
             transition: filter 0.3s ease;
         }
 
-        #lang-switcher img.active {
-            filter: none;
-        }
+        #lang-switcher img.active { filter: none; }
 
         #lang-switcher span {
             color: #fff;
@@ -89,31 +84,18 @@
         }
 
         .hero {
-            background: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?_gl=1*twa2p3*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDEzODckbzEkZzEkdDE3NTkzNDE0MzMkajE0JGwwJGgw") no-repeat center center/cover;
             height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
             padding: 0 20px;
             text-shadow: 0 2px 6px rgba(0,0,0,0.7);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 20px 0 30px;
-            font-weight: 500;
-            letter-spacing: 1.1px;
-        }
-
+        .hero h1 { font-size: 3rem; margin: 0; font-weight: 700; }
+        .hero p { font-size: 1.2rem; margin: 20px 0 30px; font-weight: 500; letter-spacing: 1.1px; }
         .hero a {
             display: inline-block;
             padding: 14px 30px;
@@ -126,16 +108,12 @@
             box-shadow: 0 5px 15px rgba(76,175,80,0.4);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
+        .hero a:hover { background: #45a049; box-shadow: 0 8px 20px rgba(69,160,73,0.6); }
 
-        .hero a:hover {
-            background: #45a049;
-            box-shadow: 0 8px 20px rgba(69,160,73,0.6);
-        }
-
-        /* Box z opisem o mnie */
+        /* Box z opisem */
         .intro-box {
             max-width: 900px;
-            margin: 50px auto;
+            margin: 50px auto 20px;
             background: rgba(34,34,34,0.85);
             color: #dcedc8;
             padding: 40px 30px;
@@ -149,11 +127,13 @@
             margin-bottom: 30px;
         }
 
+        /* Przycisk kontaktowy poza boxem */
         .contact-buttons-wrapper {
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
+            margin-bottom: 50px;
         }
 
         .contact-buttons-wrapper a {
@@ -178,11 +158,13 @@
         .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.7); }
         .github { background: #333; }
         .github:hover { background: #555; box-shadow: 0 8px 24px rgba(0,0,0,0.7); }
+        .linkedin-img { width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 
         @media (max-width: 768px) {
             nav ul li { margin-left: 15px; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
+            .hero a { padding: 12px 25px; font-size: 1rem; }
             .contact-buttons-wrapper a { padding: 12px 20px; font-size: 0.9rem; }
             .intro-box { padding: 25px 20px; }
         }
@@ -207,10 +189,10 @@
 
     <div class="hero">
         <h1 data-pl="Witaj na mojej stronie!" data-en="Welcome to my website!">Witaj na mojej stronie!</h1>
-       <p data-pl="Data Science • Big Data • HTML • CSS • Linux • Projektowanie aplikacji" 
-   data-en="Data Science • Big Data • HTML • CSS • Linux • Application Design">
-   Data Science • Big Data • HTML • CSS • Linux • Projektowanie aplikacji
-    </p>
+        <p data-pl="Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji" 
+           data-en="Data Science • Big Data • SQL • HTML • Linux • Application Design">
+           Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji
+        </p>
         <a href="o-mnie.html" data-pl="Dowiedz się więcej" data-en="Learn more">Dowiedz się więcej</a>
     </div>
 
@@ -219,12 +201,15 @@
            data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
            Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
         </p>
-        <div class="contact-buttons-wrapper">
-            <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-            <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
-            <a class="phone" href="tel:+48531553115">📞 Telefon</a>
-            <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐱 GitHub</a>
-        </div>
+    </div>
+
+    <!-- Przycisk kontaktowy poza boxem -->
+    <div class="contact-buttons-wrapper">
+        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer"> GitHub</a>
+        <a href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank"><img class="linkedin-img" src="https://media.licdn.com/dms/image/D4D03AQH1WjOnzZzQ3Q/profile-displayphoto-shrink_800_800/0/1672445315965?e=1701302400&v=beta&t=wXQhCqKpiT84rOlvxzJrwnxOvm5mrplwq0V1QXbBxxs" alt="LinkedIn Photo"></a>
     </div>
 
     <script>
@@ -240,7 +225,6 @@
             document.querySelectorAll('[data-pl]').forEach(el => {
                 el.textContent = el.getAttribute(`data-${currentLang}`);
             });
-
             if (currentLang === 'pl') {
                 flagPL.classList.add('active');
                 flagEN.classList.remove('active');
@@ -253,7 +237,6 @@
                 document.documentElement.lang = 'en';
             }
         }
-
         langSwitcher.addEventListener('click', switchLanguage);
     </script>
 
