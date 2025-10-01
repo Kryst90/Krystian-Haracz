@@ -221,39 +221,7 @@
                 font-size: 0.9rem;
             }
         }
-            <script>
-        const langSwitcher = document.getElementById('lang-switcher');
-        const flagPL = document.getElementById('flag-pl');
-        const flagEN = document.getElementById('flag-en');
-        const langLabel = document.getElementById('lang-label');
 
-        // Domyślny język
-        let currentLang = 'pl';
-
-        function switchLanguage() {
-            currentLang = currentLang === 'pl' ? 'en' : 'pl';
-
-            // Zmiana tekstów
-            document.querySelectorAll('[data-pl]').forEach(el => {
-                el.textContent = el.getAttribute(`data-${currentLang}`);
-            });
-
-            // Zmiana flag i labelki
-            if (currentLang === 'pl') {
-                flagPL.classList.add('active');
-                flagEN.classList.remove('active');
-                langLabel.textContent = 'PL';
-                document.documentElement.lang = 'pl';
-            } else {
-                flagEN.classList.add('active');
-                flagPL.classList.remove('active');
-                langLabel.textContent = 'EN';
-                document.documentElement.lang = 'en';
-            }
-        }
-
-        langSwitcher.addEventListener('click', switchLanguage);
-    </script>
     </style>
 </head>
 <body>
@@ -290,5 +258,37 @@
     <footer>
         <p>&copy; 2025 Krystian Haracz</p>
     </footer>
+      <script>
+        const langSwitcher = document.getElementById('lang-switcher');
+        const flagPL = document.getElementById('flag-pl');
+        const flagEN = document.getElementById('flag-en');
+        const langLabel = document.getElementById('lang-label');
+
+        // Domyślny język
+        let currentLang = 'pl';
+
+        function switchLanguage() {
+            currentLang = currentLang === 'pl' ? 'en' : 'pl';
+
+            // Zmiana tekstów
+            document.querySelectorAll('[data-pl]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+
+            // Zmiana flag i labelki
+            if (currentLang === 'pl') {
+                flagPL.classList.add('active');
+                flagEN.classList.remove('active');
+                langLabel.textContent = 'PL';
+                document.documentElement.lang = 'pl';
+            } else {
+                flagEN.classList.add('active');
+                flagPL.classList.remove('active');
+                langLabel.textContent = 'EN';
+                document.documentElement.lang = 'en';
+            }
+        }
+        langSwitcher.addEventListener('click', switchLanguage);
+    </script>
 </body>
 </html>
