@@ -16,6 +16,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         nav {
@@ -24,6 +25,7 @@
             align-items: center;
             background-color: rgba(34,34,34,0.9);
             padding: 15px 30px;
+            width: 100%;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -94,7 +96,7 @@
         main {
             flex: 1;
             max-width: 900px;
-            margin: 60px auto 80px;
+            margin: 60px 20px 20px;
             background: rgba(0,0,0,0.7);
             padding: 40px 50px;
             border-radius: 15px;
@@ -129,14 +131,15 @@
             margin-bottom: 12px;
         }
 
-        .contact-buttons {
+        .contact-section {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 60px;
         }
 
-        .contact-buttons a {
+        .contact-section a {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -159,14 +162,17 @@
         .phone { background: #4CAF50; }
         .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.8); }
 
+        .github { background: #333; }
+        .github:hover { background: #242424; box-shadow: 0 8px 24px rgba(0,0,0,0.8); }
+
         @media (max-width: 768px) {
             main {
-                margin: 40px 20px 60px;
+                margin: 40px 15px 20px;
                 padding: 30px 25px;
             }
             h2 { font-size: 2.2rem; }
             p.description { font-size: 1.1rem; }
-            .contact-buttons a { padding: 14px 24px; font-size: 1rem; }
+            .contact-section a { padding: 14px 24px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -201,13 +207,15 @@
             <li data-pl="Power BI – raporty i wizualizacje danych" data-en="Power BI – reports and data visualizations">Power BI – raporty i wizualizacje danych</li>
             <li data-pl="Automatyzacja procesów i analiza biznesowa" data-en="Process automation and business analysis">Automatyzacja procesów i analiza biznesowa</li>
         </ul>
-
-        <div class="contact-buttons">
-            <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer" data-pl="LinkedIn" data-en="LinkedIn">🔗 LinkedIn</a>
-            <a class="email" href="mailto:kahar@wp.pl" data-pl="Email" data-en="Email">✉️ Email</a>
-            <a class="phone" href="tel:+48531553115" data-pl="Telefon" data-en="Phone">📞 Telefon</a>
-        </div>
     </main>
+
+    <!-- Sekcja przycisków poza boxem -->
+    <div class="contact-section">
+        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer" data-pl="LinkedIn" data-en="LinkedIn">🔗 LinkedIn</a>
+        <a class="email" href="mailto:kahar@wp.pl" data-pl="Email" data-en="Email">✉️ Email</a>
+        <a class="phone" href="tel:+48531553115" data-pl="Telefon" data-en="Phone">📞 Telefon</a>
+        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer" data-pl="GitHub" data-en="GitHub">🐙 GitHub</a>
+    </div>
 
     <script>
         const langSwitcher = document.getElementById('lang-switcher');
@@ -219,11 +227,9 @@
 
         function switchLanguage() {
             currentLang = currentLang === 'pl' ? 'en' : 'pl';
-
             document.querySelectorAll('[data-pl]').forEach(el => {
                 el.textContent = el.getAttribute(`data-${currentLang}`);
             });
-
             if (currentLang === 'pl') {
                 flagPL.classList.add('active');
                 flagEN.classList.remove('active');
