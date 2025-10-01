@@ -132,12 +132,21 @@
             box-shadow: 0 8px 20px rgba(69,160,73,0.6);
         }
 
-        .intro {
+        /* Box z opisem o mnie */
+        .intro-box {
             max-width: 900px;
-            margin: 50px auto 60px;
+            margin: 50px auto;
+            background: rgba(34,34,34,0.85);
+            color: #dcedc8;
+            padding: 40px 30px;
+            border-radius: 15px;
             text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+        }
+
+        .intro-box p {
             font-size: 1.15rem;
-            color: #333;
+            margin-bottom: 30px;
         }
 
         .contact-buttons-wrapper {
@@ -145,7 +154,6 @@
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
-            margin-bottom: 60px;
         }
 
         .contact-buttons-wrapper a {
@@ -168,12 +176,15 @@
         .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.7); }
         .phone { background: #4CAF50; }
         .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.7); }
+        .github { background: #333; }
+        .github:hover { background: #555; box-shadow: 0 8px 24px rgba(0,0,0,0.7); }
 
         @media (max-width: 768px) {
             nav ul li { margin-left: 15px; }
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
             .contact-buttons-wrapper a { padding: 12px 20px; font-size: 0.9rem; }
+            .intro-box { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -196,22 +207,24 @@
 
     <div class="hero">
         <h1 data-pl="Witaj na mojej stronie!" data-en="Welcome to my website!">Witaj na mojej stronie!</h1>
-        <p data-pl="Data Science • Big Data • HTML, CSS, projektowanie aplikacji" 
-           data-en="Data Science • Big Data • HTML, CSS, application design">
-           Data Science • Big Data • HTML, Python, Projektowanie aplikacji, AI
-        </p>
+       <p data-pl="Data Science • Big Data • HTML • CSS • Linux • Projektowanie aplikacji" 
+   data-en="Data Science • Big Data • HTML • CSS • Linux • Application Design">
+   Data Science • Big Data • HTML • CSS • Linux • Projektowanie aplikacji
+    </p>
         <a href="o-mnie.html" data-pl="Dowiedz się więcej" data-en="Learn more">Dowiedz się więcej</a>
     </div>
 
-    <div class="intro" data-pl="Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje." 
-         data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
-        Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
-    </div>
-
-    <div class="contact-buttons-wrapper">
-        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
-        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+    <div class="intro-box">
+        <p data-pl="Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje." 
+           data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
+           Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
+        </p>
+        <div class="contact-buttons-wrapper">
+            <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+            <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+            <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+            <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐱 GitHub</a>
+        </div>
     </div>
 
     <script>
