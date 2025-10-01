@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -33,6 +34,7 @@
         nav ul li { margin-left: 20px; }
         nav ul li a { color: #f0f0f0; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
         nav ul li a:hover { color: #81c784; }
+
         #lang-switcher { display: flex; align-items: center; cursor: pointer; margin-left: 30px; background: transparent; border: none; outline: none; padding: 0; }
         #lang-switcher img { width: 24px; height: 16px; margin: 0 5px; filter: grayscale(100%); transition: filter 0.3s ease; }
         #lang-switcher img.active { filter: none; }
@@ -47,6 +49,7 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.8);
             color: #f0f0f0;
         }
+
         h2 { text-align: center; margin-bottom: 20px; color: #81c784; font-weight: bold; font-size: 2.5rem; }
         p.description { max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem; text-align: center; line-height: 1.6; color: #dcedc8; }
 
@@ -55,6 +58,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
+
         .project-card {
             background: #222;
             border-radius: 10px;
@@ -69,63 +73,48 @@
         .project-content { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .project-title { font-size: 1.3rem; font-weight: 700; margin: 0 0 10px; color: #a5d6a7; }
         .project-description { flex-grow: 1; font-size: 1rem; color: #c8e6c9; margin-bottom: 15px; }
-        .project-link {
-            align-self: flex-start;
-            text-decoration: none;
-            color: #81c784;
-            font-weight: 700;
-            border: 2px solid #81c784;
-            padding: 8px 16px;
-            border-radius: 30px;
-            transition: background-color 0.3s, color 0.3s;
-        }
+        .project-link { align-self: flex-start; text-decoration: none; color: #81c784; font-weight: 700; border: 2px solid #81c784; padding: 8px 16px; border-radius: 30px; transition: background-color 0.3s, color 0.3s; }
         .project-link:hover { background-color: #81c784; color: #222; }
 
-        /* Oddzielona sekcja kontaktowa */
-        .contact-section {
-            background: rgba(34,34,34,0.9);
-            padding: 30px 20px;
+        /* Oddzielna sekcja przycisków kontaktowych */
+        .contact-buttons-wrapper {
             display: flex;
             justify-content: center;
-            max-width: 1000px;
-            margin: 20px auto 40px;
-            border-radius: 10px;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
+            gap: 30px;
+            margin: 20px auto 60px;
+            max-width: 900px;
+            flex-wrap: wrap;
         }
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: nowrap;
-        }
-        .contact-buttons a {
+        .contact-buttons-wrapper a {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
+            gap: 10px;
+            padding: 16px 30px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             color: white;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
         .linkedin { background: #0077b5; }
-        .linkedin:hover { background: #005983; box-shadow: 0 6px 18px rgba(0,87,131,0.6); }
+        .linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.8); }
         .email { background: #d44638; }
-        .email:hover { background: #a33128; box-shadow: 0 6px 18px rgba(163,49,40,0.6); }
+        .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.8); }
         .phone { background: #4CAF50; }
-        .phone:hover { background: #3a923f; box-shadow: 0 6px 18px rgba(58,146,63,0.6); }
+        .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.8); }
+        .github { background: #333; }
+        .github:hover { background: #555; box-shadow: 0 8px 24px rgba(100,100,100,0.8); }
 
         footer { background: rgba(34,34,34,0.9); color: #ccc; text-align: center; padding: 20px; font-size: 0.9rem; letter-spacing: 0.05em; user-select: none; box-shadow: 0 -3px 10px rgba(0,0,0,0.7); }
 
         @media (max-width: 768px) {
+            .content-wrapper { margin: 30px 15px 20px; padding: 25px 20px; }
             h2 { font-size: 2rem; }
             p.description { font-size: 1rem; max-width: 90%; }
             .project-card { height: auto; }
-            .content-wrapper { margin: 30px 15px 20px; padding: 25px 20px; }
-            .contact-section { max-width: 95%; padding: 25px 15px; margin-bottom: 30px; }
+            .contact-buttons-wrapper a { padding: 14px 24px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -165,6 +154,7 @@
                     <a class="project-link" href="https://github.com/krystianharacz/powerbi-dashboard" target="_blank" rel="noopener noreferrer" data-pl="Zobacz na GitHub" data-en="View on GitHub">Zobacz na GitHub</a>
                 </div>
             </div>
+
             <div class="project-card">
                 <img class="project-image" src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80" alt="Python Script">
                 <div class="project-content">
@@ -176,6 +166,7 @@
                     <a class="project-link" href="https://github.com/Kryst90/LogSmith" target="_blank" rel="noopener noreferrer" data-pl="Zobacz na GitHub" data-en="View on GitHub">Zobacz na GitHub</a>
                 </div>
             </div>
+
             <div class="project-card">
                 <img class="project-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Web Application">
                 <div class="project-content">
@@ -190,14 +181,11 @@
         </div>
     </div>
 
-    <!-- Sekcja kontaktowa oddzielona od boxa -->
-    <div class="contact-section">
-        <div class="contact-buttons">
-            <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-            <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
-            <a class="phone" href="tel:+48531553115">📞 Telefon</a>
-            <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer" style="background:#333;">🐙 GitHub</a>
-        </div>
+    <div class="contact-buttons-wrapper">
+        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
     </div>
 
     <script>
@@ -210,11 +198,9 @@
 
         function switchLanguage() {
             currentLang = currentLang === 'pl' ? 'en' : 'pl';
-
             document.querySelectorAll('[data-pl]').forEach(el => {
                 el.textContent = el.getAttribute(`data-${currentLang}`);
             });
-
             if (currentLang === 'pl') {
                 flagPL.classList.add('active');
                 flagEN.classList.remove('active');
