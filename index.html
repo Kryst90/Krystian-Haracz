@@ -1,244 +1,253 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Krystian Haracz Portfolio</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?_gl=1*twa2p3*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDEzODckbzEkZzEkdDE3NTkzNDE0MzMkajE0JGwwJGgw") no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Krystian Haracz Portfolio</title>
+<link rel="icon" href="favicon.png" type="image/png" />
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?_gl=1*twa2p3*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDEzODckbzEkZzEkdDE3NTkzNDE0MzMkajE0JGwwJGgw") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(34,34,34,0.9);
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(34,34,34,0.9);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
 
-        nav .logo {
-            color: #4CAF50;
-            font-size: 26px;
-            font-weight: 700;
-            cursor: default;
-        }
+nav .logo {
+    color: #4CAF50;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: default;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 
-        nav ul li { margin-left: 25px; }
+nav ul li { margin-left: 25px; }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
 
-        nav ul li a:hover { color: #4CAF50; }
+nav ul li a:hover { color: #4CAF50; }
 
-        #lang-switcher {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            margin-left: 30px;
-            background: transparent;
-            border: none;
-            outline: none;
-            padding: 0;
-        }
+#lang-switcher {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
 
-        #lang-switcher img {
-            width: 24px;
-            height: 16px;
-            margin: 0 5px;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
+#lang-switcher img {
+    width: 24px;
+    height: 16px;
+    margin: 0 5px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
 
-        #lang-switcher img.active { filter: none; }
+#lang-switcher img.active { filter: none; }
 
-        #lang-switcher span {
-            color: #fff;
-            font-weight: 600;
-            margin-left: 8px;
-            user-select: none;
-        }
+#lang-switcher span {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 8px;
+    user-select: none;
+}
 
-        .hero {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-        }
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
 
-        .hero h1 { font-size: 3rem; margin: 0; font-weight: 700; }
-        .hero p { font-size: 1.2rem; margin: 20px 0 30px; font-weight: 500; letter-spacing: 1.1px; }
-        .hero a {
-            display: inline-block;
-            padding: 14px 30px;
-            background: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            box-shadow: 0 5px 15px rgba(76,175,80,0.4);
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hero a:hover { background: #45a049; box-shadow: 0 8px 20px rgba(69,160,73,0.6); }
+.hero img.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    object-fit: cover;
+}
 
-        /* Box z opisem */
-        .intro-box {
-            max-width: 900px;
-            margin: 50px auto 20px;
-            background: rgba(34,34,34,0.85);
-            color: #dcedc8;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
-        }
+.hero h1 { font-size: 3rem; margin: 0; font-weight: 700; }
+.hero p { font-size: 1.2rem; margin: 20px 0 30px; font-weight: 500; letter-spacing: 1.1px; }
 
-        .intro-box p {
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-        }
+.hero a {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(76,175,80,0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Przycisk kontaktowy poza boxem */
-        .contact-buttons-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
+.hero a:hover { background: #45a049; box-shadow: 0 8px 20px rgba(69,160,73,0.6); }
 
-        .contact-buttons-wrapper a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            color: white;
-            font-size: 1rem;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
+/* Box z opisem */
+.intro-box {
+    max-width: 900px;
+    margin: 30px auto 20px;
+    background: rgba(34,34,34,0.85);
+    color: #dcedc8;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
 
-        .linkedin { background: #0077b5; }
-        .linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.7); }
-        .email { background: #d44638; }
-        .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.7); }
-        .phone { background: #4CAF50; }
-        .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.7); }
-        .github { background: #333; }
-        .github:hover { background: #555; box-shadow: 0 8px 24px rgba(0,0,0,0.7); }
-        .linkedin-img { width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.intro-box p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
 
-        @media (max-width: 768px) {
-            nav ul li { margin-left: 15px; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            .hero a { padding: 12px 25px; font-size: 1rem; }
-            .contact-buttons-wrapper a { padding: 12px 20px; font-size: 0.9rem; }
-            .intro-box { padding: 25px 20px; }
-        }
-    </style>
+/* Przyciski kontaktowe poza boxem */
+.contact-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-buttons-wrapper a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin { background: #0077b5; }
+.linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.7); }
+.email { background: #d44638; }
+.email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.7); }
+.phone { background: #4CAF50; }
+.phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.7); }
+.github { background: #333; }
+.github:hover { background: #555; box-shadow: 0 8px 24px rgba(0,0,0,0.7); }
+
+@media (max-width: 768px) {
+    nav ul li { margin-left: 15px; }
+    .hero img.profile-photo { width: 120px; height: 120px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    .contact-buttons-wrapper a { padding: 12px 20px; font-size: 0.9rem; }
+    .intro-box { padding: 25px 20px; }
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Krystian Haracz</div>
-        <ul>
-            <li><a href="index.html" data-pl="Strona główna" data-en="Home">Strona główna</a></li>
-            <li><a href="o-mnie.html" data-pl="O mnie" data-en="About Me">O mnie</a></li>
-            <li><a href="projekty.html" data-pl="Projekty" data-en="Projects">Projekty</a></li>
-            <li><a href="kontakt.html" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
-        </ul>
-        <button id="lang-switcher" aria-label="Przełącz język / Switch language">
-            <img src="https://flagcdn.com/w20/pl.png" alt="Polska flaga" class="active" id="flag-pl" />
-            <img src="https://flagcdn.com/w20/gb.png" alt="UK flaga" id="flag-en" />
-            <span id="lang-label">PL</span>
-        </button>
-    </nav>
+<nav>
+    <div class="logo">Krystian Haracz</div>
+    <ul>
+        <li><a href="index.html" data-pl="Strona główna" data-en="Home">Strona główna</a></li>
+        <li><a href="o-mnie.html" data-pl="O mnie" data-en="About Me">O mnie</a></li>
+        <li><a href="projekty.html" data-pl="Projekty" data-en="Projects">Projekty</a></li>
+        <li><a href="kontakt.html" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+    </ul>
+    <button id="lang-switcher" aria-label="Przełącz język / Switch language">
+        <img src="https://flagcdn.com/w20/pl.png" alt="Polska flaga" class="active" id="flag-pl" />
+        <img src="https://flagcdn.com/w20/gb.png" alt="UK flaga" id="flag-en" />
+        <span id="lang-label">PL</span>
+    </button>
+</nav>
 
-    <div class="hero">
-        <h1 data-pl="Witaj na mojej stronie!" data-en="Welcome to my website!">Witaj na mojej stronie!</h1>
-        <p data-pl="Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji" 
-           data-en="Data Science • Big Data • SQL • HTML • Linux • Application Design">
-           Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji
-        </p>
-        <a href="o-mnie.html" data-pl="Dowiedz się więcej" data-en="Learn more">Dowiedz się więcej</a>
-    </div>
+<div class="hero">
+    <img class="profile-photo" src="https://media.licdn.com/dms/image/v2/D4D03AQElj1GsdrO4MA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732219570198?e=1762387200&v=beta&t=r0moIEd2zpaCLodTp8CuOwncEdDmr2tBcSy83qdEXs" alt="Krystian Haracz">
+    <h1 data-pl="Witaj na mojej stronie!" data-en="Welcome to my website!">Witaj na mojej stronie!</h1>
+    <p data-pl="Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji" 
+       data-en="Data Science • Big Data • SQL • HTML • Linux • Application Design">
+       Data Science • Big Data • SQL • HTML • Linux • Projektowanie aplikacji
+    </p>
+    <a href="o-mnie.html" data-pl="Dowiedz się więcej" data-en="Learn more">Dowiedz się więcej</a>
+</div>
 
-    <div class="intro-box">
-        <p data-pl="Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje." 
-           data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
-           Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
-        </p>
-    </div>
+<div class="intro-box">
+    <p data-pl="Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje." 
+       data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
+       Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
+    </p>
+</div>
 
-    <!-- Przycisk kontaktowy poza boxem -->
-    <div class="contact-buttons-wrapper">
-        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
-        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
-        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
-        <a href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank"><img class="linkedin-img" src="https://media.licdn.com/dms/image/D4D03AQH1WjOnzZzQ3Q/profile-displayphoto-shrink_800_800/0/1672445315965?e=1701302400&v=beta&t=wXQhCqKpiT84rOlvxzJrwnxOvm5mrplwq0V1QXbBxxs" alt="LinkedIn Photo"></a>
-    </div>
+<div class="contact-buttons-wrapper">
+    <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+    <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+    <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+    <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+</div>
 
-    <script>
-        const langSwitcher = document.getElementById('lang-switcher');
-        const flagPL = document.getElementById('flag-pl');
-        const flagEN = document.getElementById('flag-en');
-        const langLabel = document.getElementById('lang-label');
+<script>
+const langSwitcher = document.getElementById('lang-switcher');
+const flagPL = document.getElementById('flag-pl');
+const flagEN = document.getElementById('flag-en');
+const langLabel = document.getElementById('lang-label');
+let currentLang = 'pl';
 
-        let currentLang = 'pl';
-
-        function switchLanguage() {
-            currentLang = currentLang === 'pl' ? 'en' : 'pl';
-            document.querySelectorAll('[data-pl]').forEach(el => {
-                el.textContent = el.getAttribute(`data-${currentLang}`);
-            });
-            if (currentLang === 'pl') {
-                flagPL.classList.add('active');
-                flagEN.classList.remove('active');
-                langLabel.textContent = 'PL';
-                document.documentElement.lang = 'pl';
-            } else {
-                flagEN.classList.add('active');
-                flagPL.classList.remove('active');
-                langLabel.textContent = 'EN';
-                document.documentElement.lang = 'en';
-            }
-        }
-        langSwitcher.addEventListener('click', switchLanguage);
-    </script>
+function switchLanguage() {
+    currentLang = currentLang === 'pl' ? 'en' : 'pl';
+    document.querySelectorAll('[data-pl]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+    if (currentLang === 'pl') {
+        flagPL.classList.add('active');
+        flagEN.classList.remove('active');
+        langLabel.textContent = 'PL';
+        document.documentElement.lang = 'pl';
+    } else {
+        flagEN.classList.add('active');
+        flagPL.classList.remove('active');
+        langLabel.textContent = 'EN';
+        document.documentElement.lang = 'en';
+    }
+}
+langSwitcher.addEventListener('click', switchLanguage);
+</script>
 
 </body>
 </html>
