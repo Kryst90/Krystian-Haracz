@@ -29,68 +29,16 @@
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
+        nav .logo { color: #4CAF50; font-size: 22px; font-weight: bold; user-select: none; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: #f0f0f0; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #81c784; }
 
-        nav .logo {
-            color: #4CAF50;
-            font-size: 22px;
-            font-weight: bold;
-            user-select: none;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: #f0f0f0;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #81c784;
-        }
-
-        /* Przełącznik języka */
-        #lang-switcher {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            margin-left: 30px;
-            background: transparent;
-            border: none;
-            outline: none;
-            padding: 0;
-        }
-
-        #lang-switcher img {
-            width: 24px;
-            height: 16px;
-            margin: 0 5px;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
-
-        #lang-switcher img.active {
-            filter: none;
-        }
-
-        #lang-switcher span {
-            color: #f0f0f0;
-            font-weight: 600;
-            margin-left: 8px;
-            user-select: none;
-            font-size: 14px;
-        }
+        #lang-switcher { display: flex; align-items: center; cursor: pointer; margin-left: 30px; background: transparent; border: none; outline: none; padding: 0; }
+        #lang-switcher img { width: 24px; height: 16px; margin: 0 5px; filter: grayscale(100%); transition: filter 0.3s ease; }
+        #lang-switcher img.active { filter: none; }
+        #lang-switcher span { color: #f0f0f0; font-weight: 600; margin-left: 8px; user-select: none; font-size: 14px; }
 
         main {
             flex: 1;
@@ -104,35 +52,19 @@
             text-align: center;
         }
 
-        h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: #81c784;
-            font-weight: 700;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-        }
+        h2 { font-size: 2.8rem; margin-bottom: 20px; color: #81c784; font-weight: 700; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+        p.description { font-size: 1.3rem; line-height: 1.7; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 3px rgba(0,0,0,0.6); }
 
-        p.description {
-            font-size: 1.3rem;
-            line-height: 1.7;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-        }
-
-        /* Sekcja przycisków oddzielona od boxa */
-        .contact-buttons-container {
-            max-width: 900px;
-            margin: 30px auto 60px;
+        /* Oddzielna sekcja przycisków kontaktowych */
+        .contact-buttons-wrapper {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin: 20px auto 60px;
+            max-width: 900px;
             flex-wrap: wrap;
         }
-
-        .contact-buttons a {
+        .contact-buttons-wrapper a {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -143,33 +75,24 @@
             color: white;
             font-size: 1.1rem;
             box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .contact-buttons a:hover {
-            transform: translateY(-5px);
-        }
-
         .linkedin { background: #0077b5; }
-        .linkedin:hover { box-shadow: 0 8px 24px rgba(0,87,131,0.8); }
-
+        .linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.8); }
         .email { background: #d44638; }
-        .email:hover { box-shadow: 0 8px 24px rgba(163,49,40,0.8); }
-
+        .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.8); }
         .phone { background: #4CAF50; }
-        .phone:hover { box-shadow: 0 8px 24px rgba(58,146,63,0.8); }
-
+        .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.8); }
         .github { background: #333; }
-        .github:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.8); }
+        .github:hover { background: #555; box-shadow: 0 8px 24px rgba(100,100,100,0.8); }
+
+        footer { background: rgba(34,34,34,0.9); color: #ccc; text-align: center; padding: 20px; font-size: 0.9rem; letter-spacing: 0.05em; user-select: none; box-shadow: 0 -3px 10px rgba(0,0,0,0.7); }
 
         @media (max-width: 768px) {
-            main {
-                margin: 40px 20px 20px;
-                padding: 30px 25px;
-            }
+            main { margin: 40px 20px 20px; padding: 30px 25px; }
             h2 { font-size: 2.2rem; }
             p.description { font-size: 1.1rem; }
-            .contact-buttons a { padding: 14px 24px; font-size: 1rem; }
+            .contact-buttons-wrapper a { padding: 14px 24px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -194,16 +117,14 @@
         <h2 data-pl="Kontakt" data-en="Contact">Kontakt</h2>
         <p class="description" data-pl="Jeśli szukasz wsparcia w obszarze analizy danych, programowania lub projektów związanych z uczeniem maszynowym, chętnie nawiążę współpracę. Jestem otwarty na rozmowy o nowych wyzwaniach i projektach, w których mogę wykorzystać swoje umiejętności w analizie danych, tworzeniu modeli ML oraz programowaniu w Pythonie i innych narzędziach Big Data. Jeżeli masz pytania, pomysł na projekt lub szukasz osoby, która pomoże w analizie danych lub implementacji rozwiązań ML, śmiało napisz lub zadzwoń. Z przyjemnością omówię, jak mogę wesprzeć Twój projekt i wnieść realną wartość do zespołu."
            data-en="If you are looking for support in data analysis, programming, or machine learning projects, I would be happy to collaborate. I am open to discussions about new challenges and projects where I can apply my skills in data analysis, building ML models, and programming in Python and other Big Data tools. If you have any questions, ideas for a project, or are looking for someone to assist with data analysis or ML implementation, feel free to write or call. I would be glad to discuss how I can contribute to your project and bring real value to your team.">
-        Jeśli szukasz wsparcia w obszarze analizy danych, programowania lub projektów związanych z uczeniem maszynowym, chętnie nawiążę współpracę. Jestem otwarty na rozmowy o nowych wyzwaniach i projektach, w których mogę wykorzystać swoje umiejętności w analizie danych, tworzeniu modeli ML oraz programowaniu w Pythonie i innych narzędziach Big Data.
-Jeżeli masz pytania, pomysł na projekt lub szukasz osoby, która pomoże w analizie danych lub implementacji rozwiązań ML, śmiało napisz lub zadzwoń. Z przyjemnością omówię, jak mogę wesprzeć Twój projekt i wnieść realną wartość do zespołu.
-        </p>
+        Jeśli szukasz wsparcia w obszarze analizy danych, programowania lub projektów związanych z uczeniem maszynowym, chętnie nawiążę współpracę. Jestem otwarty na rozmowy o nowych wyzwaniach i projektach, w których mogę wykorzystać swoje umiejętności w analizie danych, tworzeniu modeli ML oraz programowaniu w Pythonie i innych narzędziach Big Data. Jeżeli masz pytania, pomysł na projekt lub szukasz osoby, która pomoże w analizie danych lub implementacji rozwiązań ML, śmiało napisz lub zadzwoń. Z przyjemnością omówię, jak mogę wesprzeć Twój projekt i wnieść realną wartość do zespołu.
     </main>
- 
-           <div class="contact-section">
-        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer" data-pl="LinkedIn" data-en="LinkedIn">🔗 LinkedIn</a>
-        <a class="email" href="mailto:kahar@wp.pl" data-pl="Email" data-en="Email">✉️ Email</a>
-        <a class="phone" href="tel:+48531553115" data-pl="Telefon" data-en="Phone">📞 Telefon</a>
-        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer" data-pl="GitHub" data-en="GitHub">🐙 GitHub</a>
+
+    <div class="contact-buttons-wrapper">
+        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+        <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
     </div>
 
     <script>
