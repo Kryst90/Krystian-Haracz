@@ -9,7 +9,6 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            /* Tło: zdjęcie programowania z ciemnym gradientem dla czytelności */
             background: linear-gradient(135deg, rgba(34,34,34,0.85), rgba(34,34,34,0.85)),
                         url('https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?_gl=1*12n8bca*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDQyNTMkbzIkZzEkdDE3NTkzNDQ5NTkkajE3JGwwJGgw') no-repeat center center fixed;
             background-size: cover;
@@ -29,84 +28,28 @@
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
-        nav .logo {
-            color: #4CAF50;
-            font-size: 22px;
-            font-weight: bold;
-            user-select: none;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #f0f0f0;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #81c784;
-        }
-        /* Przełącznik języka */
-        #lang-switcher {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            margin-left: 30px;
-            background: transparent;
-            border: none;
-            outline: none;
-            padding: 0;
-        }
-        #lang-switcher img {
-            width: 24px;
-            height: 16px;
-            margin: 0 5px;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
-        #lang-switcher img.active {
-            filter: none;
-        }
-        #lang-switcher span {
-            color: #f0f0f0;
-            font-weight: 600;
-            margin-left: 8px;
-            user-select: none;
-            font-size: 14px;
-        }
-        /* Zawartość */
+        nav .logo { color: #4CAF50; font-size: 22px; font-weight: bold; user-select: none; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: #f0f0f0; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #81c784; }
+        #lang-switcher { display: flex; align-items: center; cursor: pointer; margin-left: 30px; background: transparent; border: none; outline: none; padding: 0; }
+        #lang-switcher img { width: 24px; height: 16px; margin: 0 5px; filter: grayscale(100%); transition: filter 0.3s ease; }
+        #lang-switcher img.active { filter: none; }
+        #lang-switcher span { color: #f0f0f0; font-weight: 600; margin-left: 8px; user-select: none; font-size: 14px; }
+
         .content-wrapper {
             background-color: rgba(0,0,0,0.7);
             max-width: 1000px;
-            margin: 50px auto 60px;
+            margin: 50px auto 20px;
             padding: 30px 40px;
             border-radius: 10px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.8);
             color: #f0f0f0;
         }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #81c784;
-            font-weight: bold;
-            font-size: 2.5rem;
-        }
-        p.description {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 1.2rem;
-            text-align: center;
-            line-height: 1.6;
-            color: #dcedc8;
-        }
+        h2 { text-align: center; margin-bottom: 20px; color: #81c784; font-weight: bold; font-size: 2.5rem; }
+        p.description { max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem; text-align: center; line-height: 1.6; color: #dcedc8; }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,35 +64,11 @@
             flex-direction: column;
             transition: transform 0.3s ease;
         }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-        }
-        .project-image {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            filter: brightness(0.85);
-        }
-        .project-content {
-            padding: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 0 0 10px;
-            color: #a5d6a7;
-        }
-        .project-description {
-            flex-grow: 1;
-            font-size: 1rem;
-            color: #c8e6c9;
-            margin-bottom: 15px;
-        }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.9); }
+        .project-image { width: 100%; height: 160px; object-fit: cover; filter: brightness(0.85); }
+        .project-content { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .project-title { font-size: 1.3rem; font-weight: 700; margin: 0 0 10px; color: #a5d6a7; }
+        .project-description { flex-grow: 1; font-size: 1rem; color: #c8e6c9; margin-bottom: 15px; }
         .project-link {
             align-self: flex-start;
             text-decoration: none;
@@ -160,25 +79,24 @@
             border-radius: 30px;
             transition: background-color 0.3s, color 0.3s;
         }
-        .project-link:hover {
-            background-color: #81c784;
-            color: #222;
-        }
+        .project-link:hover { background-color: #81c784; color: #222; }
+
+        /* Oddzielona sekcja kontaktowa */
         .contact-section {
             background: rgba(34,34,34,0.9);
             padding: 30px 20px;
             display: flex;
             justify-content: center;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
-            border-radius: 10px;
             max-width: 1000px;
-            margin: 0 auto 40px;
+            margin: 20px auto 40px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
         }
         .contact-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .contact-buttons a {
             display: flex;
@@ -193,59 +111,21 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
-        .linkedin {
-            background: #0077b5;
-        }
-        .linkedin:hover {
-            background: #005983;
-            box-shadow: 0 6px 18px rgba(0,87,131,0.6);
-        }
-        .email {
-            background: #d44638;
-        }
-        .email:hover {
-            background: #a33128;
-            box-shadow: 0 6px 18px rgba(163,49,40,0.6);
-        }
-        .phone {
-            background: #4CAF50;
-        }
-        .phone:hover {
-            background: #3a923f;
-            box-shadow: 0 6px 18px rgba(58,146,63,0.6);
-        }
-        footer {
-            background: rgba(34,34,34,0.9);
-            color: #ccc;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            user-select: none;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.7);
-        }
-        /* Responsywność */
+        .linkedin { background: #0077b5; }
+        .linkedin:hover { background: #005983; box-shadow: 0 6px 18px rgba(0,87,131,0.6); }
+        .email { background: #d44638; }
+        .email:hover { background: #a33128; box-shadow: 0 6px 18px rgba(163,49,40,0.6); }
+        .phone { background: #4CAF50; }
+        .phone:hover { background: #3a923f; box-shadow: 0 6px 18px rgba(58,146,63,0.6); }
+
+        footer { background: rgba(34,34,34,0.9); color: #ccc; text-align: center; padding: 20px; font-size: 0.9rem; letter-spacing: 0.05em; user-select: none; box-shadow: 0 -3px 10px rgba(0,0,0,0.7); }
+
         @media (max-width: 768px) {
-            h2 {
-                font-size: 2rem;
-            }
-            p.description {
-                font-size: 1rem;
-                max-width: 90%;
-            }
-            .project-card {
-                height: auto;
-            }
-            .content-wrapper {
-                margin: 30px 15px 50px;
-                padding: 25px 20px;
-            }
-            .contact-section {
-                max-width: 95%;
-                margin-bottom: 30px;
-                padding: 25px 15px;
-            }
+            h2 { font-size: 2rem; }
+            p.description { font-size: 1rem; max-width: 90%; }
+            .project-card { height: auto; }
+            .content-wrapper { margin: 30px 15px 20px; padding: 25px 20px; }
+            .contact-section { max-width: 95%; padding: 25px 15px; margin-bottom: 30px; }
         }
     </style>
 </head>
@@ -310,11 +190,13 @@
         </div>
     </div>
 
+    <!-- Sekcja kontaktowa oddzielona od boxa -->
     <div class="contact-section">
         <div class="contact-buttons">
             <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
             <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
             <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+            <a class="github" href="https://github.com/Kryst90" target="_blank" rel="noopener noreferrer" style="background:#333;">🐙 GitHub</a>
         </div>
     </div>
 
