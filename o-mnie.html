@@ -6,40 +6,28 @@
     <title>Krystian Haracz Portfolio - O mnie</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
-        /* Podstawowy reset i font */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?_gl=1*kj0p4k*_ga*MTM3MTQ3NzYwOS4xNzU5MzQxMzg4*_ga_8JE65Q40S6*czE3NTkzNDQyNTMkbzIkZzEkdDE3NTkzNDQyODEkajMyJGwwJGgw') no-repeat center center fixed;
+            background: linear-gradient(135deg, rgba(34,34,34,0.85), rgba(34,34,34,0.85)),
+                        url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
             background-size: cover;
-            color: #333;
+            color: #f0f0f0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-        }
-
-        /* Ciemno-przezroczysty box dla zawartości */
-        .content-wrapper {
-            background-color: rgba(34, 34, 34, 0.85); /* ciemne półprzezroczyste tło */
-            color: #f0f0f0; /* jasny tekst */
-            max-width: 1000px;
-            margin: 50px auto 60px;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            backdrop-filter: blur(6px); /* lekko rozmyte tło */
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #222;
+            background-color: rgba(34,34,34,0.9);
             padding: 15px 30px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
 
         nav .logo {
@@ -62,17 +50,16 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: #f0f0f0;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #4CAF50;
+            color: #81c784;
         }
 
-        /* Language switcher */
         #lang-switcher {
             display: flex;
             align-items: center;
@@ -97,31 +84,44 @@
         }
 
         #lang-switcher span {
-            color: #fff;
+            color: #f0f0f0;
             font-weight: 600;
             margin-left: 8px;
             user-select: none;
             font-size: 14px;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #4CAF50;
-            font-weight: bold;
-            font-size: 2.2rem;
-            text-shadow: 0 0 8px rgba(76, 175, 80, 0.7); /* lekki efekt glow */
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 60px auto 80px;
+            background: rgba(0,0,0,0.7);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+            color: #dcedc8;
+            text-align: left;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #81c784;
+            font-weight: 700;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        p.description {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
 
         ul {
             padding-left: 20px;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 30px;
         }
 
@@ -129,100 +129,44 @@
             margin-bottom: 12px;
         }
 
-        .contact-section {
-            background: #222;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: center;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
-            border-radius: 10px;
-            max-width: 1000px;
-            margin: 0 auto 40px;
-        }
-
         .contact-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
         .contact-buttons a {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
+            gap: 10px;
+            padding: 16px 30px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             color: white;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .linkedin {
-            background: #0077b5;
-        }
+        .linkedin { background: #0077b5; }
+        .linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.8); }
 
-        .linkedin:hover {
-            background: #005983;
-            box-shadow: 0 6px 18px rgba(0,87,131,0.6);
-        }
+        .email { background: #d44638; }
+        .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.8); }
 
-        .email {
-            background: #d44638;
-        }
+        .phone { background: #4CAF50; }
+        .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.8); }
 
-        .email:hover {
-            background: #a33128;
-            box-shadow: 0 6px 18px rgba(163,49,40,0.6);
-        }
-
-        .phone {
-            background: #4CAF50;
-        }
-
-        .phone:hover {
-            background: #3a923f;
-            box-shadow: 0 6px 18px rgba(58,146,63,0.6);
-        }
-
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            user-select: none;
-        }
-
-        /* Responsywność */
         @media (max-width: 768px) {
-            nav ul li {
-                margin-left: 15px;
+            main {
+                margin: 40px 20px 60px;
+                padding: 30px 25px;
             }
-            h2 {
-                font-size: 1.8rem;
-            }
-            p, ul {
-                font-size: 1rem;
-            }
-            .contact-buttons a {
-                padding: 10px 16px;
-                font-size: 0.9rem;
-            }
-            .content-wrapper {
-                margin: 30px 15px 50px;
-                padding: 25px 20px;
-            }
-            .contact-section {
-                max-width: 95%;
-                margin-bottom: 30px;
-                padding: 25px 15px;
-            }
+            h2 { font-size: 2.2rem; }
+            p.description { font-size: 1.1rem; }
+            .contact-buttons a { padding: 14px 24px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -243,12 +187,13 @@
         </button>
     </nav>
 
-    <div class="content-wrapper">
+    <main>
         <h2 data-pl="O mnie" data-en="About Me">O mnie</h2>
-        <p data-pl="Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze."
+        <p class="description" data-pl="Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze."
            data-en="Hi! I'm Krystian, passionate about IT and data analytics. I create solutions in Big Data, data analysis, and visualization. I enjoy combining creativity with technology, experimenting with new tools, and automating processes to make life easier.">
-           Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze.
+        Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze.
         </p>
+
         <ul>
             <li data-pl="Big Data i przetwarzanie dużych zbiorów danych" data-en="Big Data and processing large datasets">Big Data i przetwarzanie dużych zbiorów danych</li>
             <li data-pl="SQL i zarządzanie bazami danych" data-en="SQL and database management">SQL i zarządzanie bazami danych</li>
@@ -256,15 +201,13 @@
             <li data-pl="Power BI – raporty i wizualizacje danych" data-en="Power BI – reports and data visualizations">Power BI – raporty i wizualizacje danych</li>
             <li data-pl="Automatyzacja procesów i analiza biznesowa" data-en="Process automation and business analysis">Automatyzacja procesów i analiza biznesowa</li>
         </ul>
-    </div>
 
-    <div class="contact-section">
         <div class="contact-buttons">
             <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer" data-pl="LinkedIn" data-en="LinkedIn">🔗 LinkedIn</a>
             <a class="email" href="mailto:kahar@wp.pl" data-pl="Email" data-en="Email">✉️ Email</a>
             <a class="phone" href="tel:+48531553115" data-pl="Telefon" data-en="Phone">📞 Telefon</a>
         </div>
-    </div>
+    </main>
 
     <script>
         const langSwitcher = document.getElementById('lang-switcher');
