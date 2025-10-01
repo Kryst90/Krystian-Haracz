@@ -58,7 +58,6 @@
             color: #4CAF50;
         }
 
-        /* Language switcher button */
         #lang-switcher {
             display: flex;
             align-items: center;
@@ -103,13 +102,13 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin: 0;
             font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin: 20px 0 30px;
             font-weight: 500;
             letter-spacing: 1.1px;
@@ -133,26 +132,23 @@
             box-shadow: 0 8px 20px rgba(69,160,73,0.6);
         }
 
-        /* Usunięta sekcja z białym tłem dla kontaktu */
-
-        /* Nowa sekcja kontaktowa na tle */
-        .contact-section {
-            background: rgba(34, 34, 34, 0.85); /* ciemne półprzezroczyste tło */
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
+        .intro {
+            max-width: 900px;
+            margin: 50px auto 60px;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #333;
         }
 
-        /* Przyciski kontaktowe */
-        .contact-buttons {
+        .contact-buttons-wrapper {
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
+            margin-bottom: 60px;
         }
 
-        .contact-buttons a {
+        .contact-buttons-wrapper a {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -166,62 +162,19 @@
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .linkedin {
-            background: #0077b5;
-        }
+        .linkedin { background: #0077b5; }
+        .linkedin:hover { background: #005983; box-shadow: 0 8px 24px rgba(0,87,131,0.7); }
+        .email { background: #d44638; }
+        .email:hover { background: #a33128; box-shadow: 0 8px 24px rgba(163,49,40,0.7); }
+        .phone { background: #4CAF50; }
+        .phone:hover { background: #3a923f; box-shadow: 0 8px 24px rgba(58,146,63,0.7); }
 
-        .linkedin:hover {
-            background: #005983;
-            box-shadow: 0 8px 24px rgba(0,87,131,0.7);
-        }
-
-        .email {
-            background: #d44638;
-        }
-
-        .email:hover {
-            background: #a33128;
-            box-shadow: 0 8px 24px rgba(163,49,40,0.7);
-        }
-
-        .phone {
-            background: #4CAF50;
-        }
-
-        .phone:hover {
-            background: #3a923f;
-            box-shadow: 0 8px 24px rgba(58,146,63,0.7);
-        }
-
-        /* Stopka - ciemne tło, wyśrodkowana treść */
-        footer {
-            background: #111;
-            color: #ccc;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 0;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.7);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            nav ul li {
-                margin-left: 15px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .contact-buttons a {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-            }
+            nav ul li { margin-left: 15px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .contact-buttons-wrapper a { padding: 12px 20px; font-size: 0.9rem; }
         }
-
     </style>
 </head>
 <body>
@@ -243,39 +196,38 @@
 
     <div class="hero">
         <h1 data-pl="Witaj na mojej stronie!" data-en="Welcome to my website!">Witaj na mojej stronie!</h1>
-        <p data-pl="Data Science • Big Data • Power BI" data-en="Data Science • Big Data • Power BI">Data Science • Big Data • Power BI</p>
+        <p data-pl="Data Science • Big Data • HTML, CSS, projektowanie aplikacji" 
+           data-en="Data Science • Big Data • HTML, CSS, application design">
+           Data Science • Big Data • HTML, Python, Projektowanie aplikacji, AI
+        </p>
         <a href="o-mnie.html" data-pl="Dowiedz się więcej" data-en="Learn more">Dowiedz się więcej</a>
     </div>
 
-    <div class="contact-section">
-        <div class="contact-buttons">
-            <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-            <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
-            <a class="phone" href="tel:+48531553115">📞 Telefon</a>
-        </div>
+    <div class="intro" data-pl="Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje." 
+         data-en="I am passionate about data analysis and creating modern web applications. I combine technical knowledge with business practice, using HTML, CSS and Big Data tools to deliver clear and useful reports and interactive applications.">
+        Jestem pasjonatem analizy danych i tworzenia nowoczesnych aplikacji webowych. Łączę wiedzę techniczną z praktyką biznesową, wykorzystując HTML, CSS oraz narzędzia Big Data, aby dostarczać czytelne i użyteczne raporty oraz interaktywne aplikacje.
     </div>
 
-    <footer>
-        <p>&copy; 2025 Krystian Haracz</p>
-    </footer>
-      <script>
+    <div class="contact-buttons-wrapper">
+        <a class="linkedin" href="https://www.linkedin.com/in/krystian-haracz-791020288/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a class="email" href="mailto:kahar@wp.pl">✉️ Email</a>
+        <a class="phone" href="tel:+48531553115">📞 Telefon</a>
+    </div>
+
+    <script>
         const langSwitcher = document.getElementById('lang-switcher');
         const flagPL = document.getElementById('flag-pl');
         const flagEN = document.getElementById('flag-en');
         const langLabel = document.getElementById('lang-label');
 
-        // Domyślny język
         let currentLang = 'pl';
 
         function switchLanguage() {
             currentLang = currentLang === 'pl' ? 'en' : 'pl';
-
-            // Zmiana tekstów
             document.querySelectorAll('[data-pl]').forEach(el => {
                 el.textContent = el.getAttribute(`data-${currentLang}`);
             });
 
-            // Zmiana flag i labelki
             if (currentLang === 'pl') {
                 flagPL.classList.add('active');
                 flagEN.classList.remove('active');
@@ -288,7 +240,9 @@
                 document.documentElement.lang = 'en';
             }
         }
+
         langSwitcher.addEventListener('click', switchLanguage);
     </script>
+
 </body>
 </html>
