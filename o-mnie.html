@@ -18,15 +18,16 @@
             flex-direction: column;
         }
 
-        /* Półprzezroczyste tło dla zawartości */
+        /* Ciemno-przezroczysty box dla zawartości */
         .content-wrapper {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(34, 34, 34, 0.85); /* ciemne półprzezroczyste tło */
+            color: #f0f0f0; /* jasny tekst */
             max-width: 1000px;
             margin: 50px auto 60px;
             padding: 30px 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            color: #333;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            backdrop-filter: blur(6px); /* lekko rozmyte tło */
         }
 
         nav {
@@ -109,6 +110,7 @@
             color: #4CAF50;
             font-weight: bold;
             font-size: 2.2rem;
+            text-shadow: 0 0 8px rgba(76, 175, 80, 0.7); /* lekki efekt glow */
         }
 
         p {
@@ -243,9 +245,9 @@
 
     <div class="content-wrapper">
         <h2 data-pl="O mnie" data-en="About Me">O mnie</h2>
-        <p data-pl="Cześć! Jestem pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych."
-           data-en="Hi! I am passionate about IT and data analytics. I create solutions in Big Data, data analysis, and visualization.">
-           Cześć! Jestem pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych.
+        <p data-pl="Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze."
+           data-en="Hi! I'm Krystian, passionate about IT and data analytics. I create solutions in Big Data, data analysis, and visualization. I enjoy combining creativity with technology, experimenting with new tools, and automating processes to make life easier.">
+           Cześć! Jestem Krystian, pasjonatem IT i analityki danych. Tworzę rozwiązania w obszarze Big Data, analizy i wizualizacji danych. Lubię łączyć kreatywność z technologią, eksperymentować z nowymi narzędziami i automatyzować procesy, aby życie stało się łatwiejsze.
         </p>
         <ul>
             <li data-pl="Big Data i przetwarzanie dużych zbiorów danych" data-en="Big Data and processing large datasets">Big Data i przetwarzanie dużych zbiorów danych</li>
@@ -263,6 +265,11 @@
             <a class="phone" href="tel:+48531553115" data-pl="Telefon" data-en="Phone">📞 Telefon</a>
         </div>
     </div>
+
+    <footer>
+        &copy; 2025 Krystian Haracz. Wszelkie prawa zastrzeżone.
+    </footer>
+
     <script>
         const langSwitcher = document.getElementById('lang-switcher');
         const flagPL = document.getElementById('flag-pl');
